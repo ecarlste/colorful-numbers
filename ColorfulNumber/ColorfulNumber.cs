@@ -8,5 +8,9 @@ namespace ColorfulNumberLibrary
 {
     public class ColorfulNumber
     {
+        public Boolean IsColorful(int number)
+        {
+            return false;
+        }
     }
 }
