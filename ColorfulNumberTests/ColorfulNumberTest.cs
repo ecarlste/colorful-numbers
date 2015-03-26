@@ -48,5 +48,15 @@ namespace ColorfulNumberLibraryTests
 
             Assert.IsFalse(isColorful);
         }
+
+        [TestMethod]
+        public void TestIsNotColorfulWithDuplicates()
+        {
+            int number = 737;
+
+            Boolean isColorful = new ColorfulNumber().IsColorful(number);
+
+            Assert.IsFalse(isColorful);
+        }
     }
 }
