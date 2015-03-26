@@ -20,8 +20,8 @@ namespace ColorfulNumberLibrary
                 return false;
             }
 
-            // if there is a zero contained in the number then we also know it can't be colorful
-            if (stringyNumber.Contains('0'))
+            // if there is a 0 or 1 contained in the number then we also know it can't be colorful
+            if (stringyNumber.Contains('0') || stringyNumber.Contains('1'))
             {
                 return false;
             }
@@ -31,10 +31,13 @@ namespace ColorfulNumberLibrary
             HashSet<int> products = new HashSet<int>(test.ConvertAll<int>(x => (int)x));
 
             // before continuing we want to know that we found no duplicate products
-            if (digits != products.Count)
+            int productCount = products.Count;
+            if (digits != productCount)
             {
                 return false;
             }
+
+
 
             throw new NotImplementedException();
         }

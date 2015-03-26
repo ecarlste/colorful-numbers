@@ -40,9 +40,19 @@ namespace ColorfulNumberLibraryTests
         }
 
         [TestMethod]
+        public void TestIsNotColorfulWithOne()
+        {
+            int number = 317;
+
+            Boolean isColorful = new ColorfulNumber().IsColorful(number);
+
+            Assert.IsFalse(isColorful);
+        }
+
+        [TestMethod]
         public void TestIsNotColorfulWithMoreThanTenDigits()
         {
-            long number = 98765432197;
+            long number = 98765432297;
 
             Boolean isColorful = new ColorfulNumber().IsColorful(number);
 
